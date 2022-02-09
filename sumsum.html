@@ -1,0 +1,145 @@
+<html>
+<head><title>form2</title>
+<script type="text/javascript">
+function cal()
+{
+var from=document.getElementById("from").value;
+var dest=document.getElementById("dest").value;
+var name=document.getElementById("name").value;
+var km=parseInt(document.getElementById("km").value);
+var bc=parseInt(document.getElementById("bc").value);
+var ckm=parseInt(document.getElementById("ckm").value);
+var bw=parseInt(document.getElementById("bw").value);
+var dt=parseInt(document.getElementById("dt").value);
+var bt=parseInt(document.getElementById("bt").value);
+tc.value=(km*ckm+(km*ckm*dt)/100)+(bc*bw+(bc*bw*bt)/100);
+dtv.value=(km*bc)*dt)/100;
+btv.value=(bc*bw)*bt)/100;
+var ta=parseInt(document.getElementById("ta").value);
+ta.value= tc+dtv+btv;
+
+
+}
+fucntion re()
+{
+from.value="";
+dest.value="";
+name.value="";
+km.value="";
+bc.value="";
+ckm.value="";
+bw.value="";
+dt.value="";
+bt.value="";
+}
+
+</script>
+</head>
+<body bgcolor="lightblue">
+<table border=2>
+<tr>
+<td>
+<label>from</lable>
+</td>
+<td>
+<input type="text" id="from"></input>
+</td>
+<td>
+<label>destination</lable>
+</td>
+<td>
+<input type="text" id="dest"></input>
+</td>
+</tr>
+<tr>
+<td>
+<label>date</lable>
+</td>
+<td>
+<input type="text" id="date"></input>
+</td>
+</tr>
+<tr>
+<td>
+<label>name</lable>
+</td>
+<td>
+<input type="text" id="name"></input>
+</td>
+</tr>
+<tr>
+
+<td>
+<label>km</lable>
+</td>
+<td>
+<input type="text" id="km"></input>
+</td>
+<td>
+<label>baggage cost</lable>
+</td>
+<td>
+<input type="text" id="bc"></input>
+</td>
+<td>
+<label>total cost</lable>
+</td>
+<td>
+<input type="text" id="tc"></input>
+</td>
+</tr>
+<tr>
+<td>
+<label>cost/km</lable>
+</td>
+<td>
+<input type="text" id="ckm"></input>
+</td>
+<td>
+<label>baggage weight</lable>
+</td>
+<td>
+<input type="text" id="bw"></input>
+</td>
+<td>
+<label>Dtax value</lable>
+</td>
+<td>
+<input type="text" id="dtv"></input>
+</td>
+</tr>
+<tr>
+<td>
+<label>dtax</lable>
+</td>
+<td>
+<input type="text" id="dt"></input>
+</td>
+<td>
+<label>btax</lable>
+</td>
+<td>
+<input type="text" id="bt"></input>
+</td>
+<td>
+<label>btax value</lable>
+</td>
+<td>
+<input type="text" id="btv"></input>
+</td>
+</tr>
+<tr>
+<td>
+
+<label> total amount</lable>
+<input type="text" id="ta"></input>
+</td>
+<td>
+<input type="button" value="total cost" onClick="cal()"></input>
+<input type="button" value="reset" onClick="re()"></input>
+</td>
+</tr>
+</table>
+</body>
+</html>
+
